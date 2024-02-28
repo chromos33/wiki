@@ -1,0 +1,7 @@
+---
+Name: Wiki-Routes
+After: '*'
+---
+SilverStripe\Control\Director:
+  rules:
+    'wiki//$Action/$ID/$OtherID': 'Wiki\WikiController'
