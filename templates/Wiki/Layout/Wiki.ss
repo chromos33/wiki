@@ -1,5 +1,5 @@
-<% require javascript('public/resources/wiki/client/js/bootstrap-native-v4.min') %>
-<% require css('public/resources/wiki/client/css/wiki.css') %>
+<% require javascript('/resources/vendor/chromos33/wiki/client/js/bootstrap-native-v4.min') %>
+<% require css('/resources/vendor/chromos33/wiki/client/css/wiki.css') %>
 <% include Wiki/WikiAddEntryModal %>
 <% include Wiki/WikiSearch %>
 <% if RandomWikiEntries %>
