@@ -79,11 +79,11 @@ class WikiEntryController extends PageController
         foreach($data["ExtraFiles"] as $FileID)
         {
             $ID = Convert::raw2sql($FileID);
-            if(count($entry->Files()->filter("ID",$ID) == 0))
+            if(count($entry->Files()->filter("ID",$ID)) == 0)
             {
                 //Add
                 $file = File::get()->byID($ID);
-                if(count($file)>0)
+                if($file != null)
                 {
                     $entry->Files()->add($file);
                 }
