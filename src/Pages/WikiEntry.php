@@ -4,6 +4,7 @@ use Page;
 use SilverStripe\Dev\Debug;
 use SilverStripe\Assets\File;
 use SilverStripe\Security\Permission;
+use SilverStripe\AssetAdmin\Forms\UploadField;
 
 class WikiEntry extends Page
 {
