@@ -18,6 +18,22 @@ class WikiEntry extends Page
     //LockTime in Seconds
     private const LockTime = 1*60*60;
 
+
+    public function getCMSFields()
+    {
+        $fields = parent::getCMSFields();
+        $fields->addFieldsToTab(
+            'Root.Main',
+            [
+                UploadField::create(
+                    'Files',
+                    'Dateien'
+                )
+            ]
+        );
+        return $fields;
+    }
+
     public function EditOpen($RequestEditorID = 0)
     {
         if($RequestEditorID == $this->EditorID)
