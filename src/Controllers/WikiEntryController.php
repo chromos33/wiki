@@ -48,7 +48,7 @@ class WikiEntryController extends PageController
             $this->LockEdit($RequestEditorID);
         }
         
-        return $this->renderWith(["Wiki/WikiEntry","Page"]);
+        return $this->customise(['canEdit' => $this->data()->canEdit()])->renderWith(["Wiki/WikiEntry","Page"]);
     }
 
 
