@@ -16,10 +16,20 @@ class Wiki extends Page
     }
     public function canEdit($member = null)
     {
-        return Permission::check('CANEDITWIKIPAGES');
+        $result = parent::canEdit($member);
+        if($result == true)
+        {
+           return Permission::check('CANEDITWIKIPAGES'); 
+        }
+        return false;
     }
     public function canView($member = null)
     {
-        return Permission::check('CANVIEWWIKIPAGES');
+        $result = parent::canView($member);
+        if($result == true)
+        {
+           return Permission::check('CANVIEWWIKIPAGES');
+        }
+        return false;
     }
 }   
